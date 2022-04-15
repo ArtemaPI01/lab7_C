@@ -21,7 +21,7 @@ int main()
 	Owner* Alisher;
 	Boxoffice box;
 	Warehouse* house;
-	/*Ashan = new Shop[1];
+	Ashan = new Shop[1];
 	for (int i = 0; i < 1; i++)
 	{
 		Ashan[i].enter();
@@ -32,7 +32,7 @@ int main()
 	Alisher = new Owner;
 	Alisher->enter();
 	Alisher->print();
-	delete Alisher;*/
+	delete Alisher;
 	house = new Warehouse;
 	(*house).init("Арбуз Тыква Огурец", 7);
 	(*house).print();
