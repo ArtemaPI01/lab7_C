@@ -19,9 +19,9 @@ int main()
 	SetConsoleCP(1251);
 	Shop* Ashan;
 	Owner* Alisher;
-	Boxoffice* b;
-	Warehouse* a;
-	Ashan = new Shop[1];
+	Boxoffice box;
+	Warehouse* house;
+	/*Ashan = new Shop[1];
 	for (int i = 0; i < 1; i++)
 	{
 		Ashan[i].enter();
@@ -32,18 +32,17 @@ int main()
 	Alisher = new Owner;
 	Alisher->enter();
 	Alisher->print();
-	delete Alisher;
-	a = new Warehouse;
-	(*a).init("Арбуз Тыква Огурец", 7);
-	(*a).print();
+	delete Alisher;*/
+	house = new Warehouse;
+	(*house).init("Арбуз Тыква Огурец", 7);
+	(*house).print();
 	int t = 20;
-	std::cout << "\nСкорость разгрузки "<< t <<" тонн в минутах: " << (*a).cloakWarehouse(20) << "\n";
-	(*a).Poisk("Тыква");
-	delete a;
-	b = new Boxoffice;
-	b->enter();
-	b->print();
-	b->cloakBoxoffice(100);
-	delete b;
+	cout << "\nСкорость разгрузки "<< t <<" тонн в минутах: " << *(*house).cloakWarehouse(20) << "\n";
+	(*house).Poisk("Тыква");
+	delete house;
+	box.enter();
+	box.print();
+	int x = 100;
+	cout << "\nВремя обслуживания " << x << " клиентов - " << box.cloakBoxoffice(x) << " минуты\n";
 	_getch;
 }

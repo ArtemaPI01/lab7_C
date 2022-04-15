@@ -8,7 +8,7 @@ public:
 	void init(std::string products, int station);
 	void enter();
 	void print();
-	int cloakWarehouse(int x);
+	int* cloakWarehouse(int x);
 	void Poisk(std::string product);
 };
 

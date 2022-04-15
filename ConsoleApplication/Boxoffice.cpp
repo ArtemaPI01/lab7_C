@@ -25,10 +25,12 @@ void Boxoffice::print() {
 	std::cout << "\nКасса:\nКол-во рабочих - " << workers << "\nКол - во касс - " << count;
 	fio.print();
 }
-void Boxoffice::cloakBoxoffice(int x) {
+
+int& Boxoffice::cloakBoxoffice(int x) {
 	int a;
 	if (count - workers < 0)
 		a = (x / count) * 2;
-	a = (x / workers) * 2;
-	std::cout << "\nВремя обслуживания " << x << " клиентов - " << a << " минуты\n";
+	else
+		a = (x / workers) * 2;
+	return a;
 }

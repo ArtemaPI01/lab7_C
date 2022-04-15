@@ -10,6 +10,6 @@ public:
 	void init(int workers, int count, FIO fio);
 	void enter();
 	void print();
-	void cloakBoxoffice(int x);
+	int& cloakBoxoffice(int x);
 };
 

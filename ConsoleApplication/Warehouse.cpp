@@ -22,7 +22,7 @@ void Warehouse::print() {
 	std::cout << "\nСклад\nТовар - " << products << "\nПункты приема - " << station << "\n";
 }
 
-int Warehouse::cloakWarehouse(int x) {
+int* Warehouse::cloakWarehouse(int x) {
 	int i = 0;
 	int time = 0;
 	while (i < x)
@@ -30,7 +30,7 @@ int Warehouse::cloakWarehouse(int x) {
 		time += 15;
 		i += station;
 	}
-	return time;
+	return &time;
 }
 
 void Warehouse::Poisk(std::string product) {
