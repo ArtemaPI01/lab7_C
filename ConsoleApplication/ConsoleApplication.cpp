@@ -17,7 +17,7 @@ int main()
 {
 	setlocale(LC_ALL, "Rus");
 	SetConsoleCP(1251);
-	/*Shop* Ashan;
+	Shop* Ashan;
 	Owner* Alisher;
 	Warehouse* house;
 	Ashan = new Shop[1];
@@ -38,7 +38,7 @@ int main()
 	int t = 20;
 	cout << "\nСкорость разгрузки "<< t <<" тонн в минутах: " << *(*house).cloakWarehouse(20) << "\n";
 	(*house).Poisk("Тыква");
-	delete house;*/
+	delete house;
 	Boxoffice box;
 	box.enter();
 	box.print();
