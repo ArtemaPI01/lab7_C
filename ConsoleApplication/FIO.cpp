@@ -15,7 +15,7 @@ void FIO::enter() {
 	getline(std::cin, name);
 	std::cout << "\n¬ведите фамилию: ";
 	getline(std::cin, surname);
-	std::cout << "\n¬ведите ќтчество: ";
+	std::cout << "\n¬ведите отчество: ";
 	getline(std::cin, patronymic);
 }
 void FIO::print() {

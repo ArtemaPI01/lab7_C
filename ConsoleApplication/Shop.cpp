@@ -26,15 +26,16 @@ void Shop::enter() {
 void Shop::print() {
 	std::cout << "\nИнформация о магазине:\nНазвание - " << name << "\nТип - " << type << "\nУлица - " << street << "\nЧасы работы - " << cloak << "\n", name, type, street, cloak;
 }
-void Shop::cloakShop() {
+
+void cloakShop(Shop &x) {
 	char str1[5];
 	char str2[5];
 	int k = 0;
 	for (int i = 0; i < 5; i++)
 	{
 		if (i == 2) i++;
-		str1[k] = cloak.c_str()[i];
-		str2[k] = cloak.c_str()[i + 6];
+		str1[k] = x.cloak.c_str()[i];
+		str2[k] = x.cloak.c_str()[i + 6];
 		k++;
 	}
 	int a = atoi(str2) / 100 - atoi(str1) / 100;
@@ -43,5 +44,5 @@ void Shop::cloakShop() {
 		b += 60;
 		a--;
 	}
-	std::cout << "\nЧасы работы - " << cloak << "\nЧасы -  " << a << " \nМинуты - " << b << "\n";
+	std::cout << "\nЧасы работы - " << x.cloak << "\nЧасы -  " << a << " \nМинуты - " << b << "\n";
 }

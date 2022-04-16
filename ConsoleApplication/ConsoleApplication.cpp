@@ -26,7 +26,7 @@ int main()
 	{
 		Ashan[i].enter();
 		Ashan[i].print();
-		Ashan[i].cloakShop();
+		cloakShop(Ashan[i]);
 	}
 	delete[] Ashan;
 	Alisher = new Owner;
