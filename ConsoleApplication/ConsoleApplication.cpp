@@ -17,9 +17,8 @@ int main()
 {
 	setlocale(LC_ALL, "Rus");
 	SetConsoleCP(1251);
-	Shop* Ashan;
+	/*Shop* Ashan;
 	Owner* Alisher;
-	Boxoffice box;
 	Warehouse* house;
 	Ashan = new Shop[1];
 	for (int i = 0; i < 1; i++)
@@ -39,10 +38,17 @@ int main()
 	int t = 20;
 	cout << "\nСкорость разгрузки "<< t <<" тонн в минутах: " << *(*house).cloakWarehouse(20) << "\n";
 	(*house).Poisk("Тыква");
-	delete house;
+	delete house;*/
+	Boxoffice box;
 	box.enter();
 	box.print();
 	int x = 100;
 	cout << "\nВремя обслуживания " << x << " клиентов - " << box.cloakBoxoffice(x) << " минуты\n";
+	Boxoffice box1 = box++;
+	box1.print();	
+	Boxoffice box2 = ++box;
+	box2.print();
+	Boxoffice box3 = box1 + box2;
+	box3.print();
 	_getch;
 }

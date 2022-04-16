@@ -11,6 +11,8 @@ void Boxoffice::init(int w, int c, FIO f) { //Метод создания
 	this->fio = fio;
 }
 
+
+
 void Boxoffice::enter() {
 	std::cout << "\nВведите ФИО старшего кассира : ";
 	fio.enter();
@@ -33,4 +35,25 @@ int& Boxoffice::cloakBoxoffice(int x) {
 	else
 		a = (x / workers) * 2;
 	return a;
+}
+
+Boxoffice& Boxoffice::operator++()
+{
+	this->workers++;
+	this->count++;
+	return *this;
+}
+
+Boxoffice& Boxoffice::operator++(int x) {
+	Boxoffice temp = *this;
+	this->workers++;
+	this->count++;
+	return temp;
+}
+
+Boxoffice Boxoffice::operator+(const Boxoffice& other) {
+	Boxoffice temp;
+	temp.workers = this->workers + other.workers;
+	temp.count = this->count + other.count;
+	return temp;
 }

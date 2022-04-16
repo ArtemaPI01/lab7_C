@@ -11,5 +11,8 @@ public:
 	void enter();
 	void print();
 	int& cloakBoxoffice(int x);
+	Boxoffice& operator ++();
+	Boxoffice& operator ++(int x);
+	Boxoffice operator +(const Boxoffice& other);
 };
 
